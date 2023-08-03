@@ -41,6 +41,10 @@
 #     n += 1
 #
 
+import math
+import time
+
+
 
 n = int(input())
 sentences = []
@@ -49,6 +53,8 @@ for i in range(n):
     sentence = input()
     sentences.append(sentence)
 
+start = time.time()
+math.factorial(100000)
 for x in sentences:
     n = 0
     for i in range(100):
@@ -57,3 +63,6 @@ for x in sentences:
         print("YES")
     else:
         print("NO")
+
+end = time.time()
+print(f"{end - start:.5f} sec")
